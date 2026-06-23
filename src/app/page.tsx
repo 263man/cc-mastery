@@ -51,7 +51,7 @@ export default function Page() {
               type="checkbox"
               checked={task.completed}
               onChange={() => toggleTask(task.id)}
-              className="h-4 w-4 cursor-pointer accent-blue-600"
+              className="h-4 w-4 cursor-pointer accent-blue-500"
             />
             <span className={task.completed ? 'line-through text-gray-400' : ''}>
               {task.text}
