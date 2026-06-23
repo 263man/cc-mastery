@@ -29,7 +29,7 @@ Path alias: `@/*` → `src/*`.
 
 ### Next.js 16 conventions to know
 
-- **Named exports only** — do not use `export default` anywhere in this project.
+- **Exports** — Next.js file-convention files (`page.tsx`, `layout.tsx`, `error.tsx`, `loading.tsx`) must use `export default`. All other components and utilities use named exports only.
 - **Client Components** — add `'use client'` at the top of any file that uses `useState`, `useEffect`, event handlers, or browser APIs. Pages are Server Components by default.
 - **Async Request APIs** — `cookies()`, `headers()`, `draftMode()`, and page/layout `params`/`searchParams` are now Promises (synchronous access removed in v16). Use `await` or React's `use()`.
 - **`proxy` not `middleware`** — the edge proxy file is named `proxy.ts` and exports `export function proxy(request: Request) {}`.
@@ -40,3 +40,7 @@ Path alias: `@/*` → `src/*`.
 ### Tailwind v4
 
 No `tailwind.config.*` file. Configuration lives in `globals.css` via `@theme inline { ... }`. Utility classes work the same way in JSX.
+
+## Conventions
+
+- Next.js file-convention files (`page.tsx`, `layout.tsx`, `error.tsx`, `loading.tsx`) must use `export default`. All other components and utilities use named exports only.
